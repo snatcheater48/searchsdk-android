@@ -1,0 +1,5 @@
+-keep class com.yahoo.mobile.client.share.search.** { *; }
+-keep interface com.yahoo.mobile.client.share.search.** { *; }
+-keep class * implements com.yahoo.mobile.client.share.search.interfaces.IFactory
+-dontwarn com.yahoo.mobile.client.share.search.**
+-dontwarn com.yahoo.data.**

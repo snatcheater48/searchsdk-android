@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/content_suggest_message_textview"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/demo_content_suggest_message"
+            style="@style/Widget.SearchDemo.MessageTextView"
+            android:textAppearance="@style/TextAppearance.SearchDemo.MessageTextAppearance" />
+
+        <com.yahoo.android.search.showcase.views.SearchBarView
+            android:id="@+id/demo_search_bar_augmented_reality_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_bar_height"
+            android:layout_margin="@dimen/search_bar_margin"
+            custom:voiceSearchEnabled="true"
+            custom:displayText="@string/augmented_reality" />
+
+
+        <com.yahoo.android.search.showcase.views.SearchSettingsView
+            android:id="@+id/content_suggest_augmented_reality_search_settings_layout"
+            style="@style/Widget.SearchDemo.SearchBarSearchSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View style="@style/Widget.SearchDemo.Separator" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/demo_content_suggest_cats_text"
+            style="@style/Widget.SearchDemo.MessageTextView"
+            android:textAppearance="@style/TextAppearance.SearchDemo.MessageTextAppearance" />
+
+        <ImageView
+            android:id="@+id/demo_search_bar_cats_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/search_demo_fragment_margin"
+            android:layout_marginRight="@dimen/search_demo_fragment_margin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cats" />
+
+        <com.yahoo.android.search.showcase.views.SearchSettingsView
+            android:id="@+id/content_suggest_cats_settings_layout"
+            style="@style/Widget.SearchDemo.SearchBarSearchSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>

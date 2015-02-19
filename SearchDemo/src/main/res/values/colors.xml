@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="demo_search_light_gray">#CCCCCB</color>
+    <color name="demo_search_gray_background">#EDEDF1</color>
+    <color name="demo_search_settings_black_text">@android:color/black</color>
+    <color name="demo_search_settings_gray_text">#BEBEBE</color>
+    <color name="demo_search_bar_message_text_color">@android:color/black</color>
+    <color name="demo_action_bar_green">#33D6AD</color>
+    <color name="search_separator_color">#848483</color>
+    <color name="search_actionbar_color">#400090</color>
+    <color name="search_preview_button_color">#400090</color>
+    <color name="demo_navigation_drawer_background">#FFFFFF</color>
+    <color name="demo_button_pressed_color">#8252B3</color>
+
+</resources>

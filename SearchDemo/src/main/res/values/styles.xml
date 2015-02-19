@@ -1,0 +1,40 @@
+<resources>
+
+    <style name="Widget.SearchDemo" parent="@android:style/Widget" />
+
+    <style name="Widget.SearchDemo.SearchBarSearchSettings">
+        <item name="android:layout_marginLeft">@dimen/search_bar_settings_margin</item>
+        <item name="android:layout_marginRight">@dimen/search_bar_settings_margin</item>
+        <item name="android:layout_marginBottom">@dimen/search_bar_settings_margin</item>
+    </style>
+
+    <style name="Widget.SearchDemo.MessageTextView" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/search_demo_fragment_margin</item>
+        <item name="android:layout_marginRight">@dimen/search_demo_fragment_margin</item>
+        <item name="android:layout_marginTop">@dimen/search_demo_fragment_margin</item>
+     </style>
+
+    <style name="Widget.SearchDemo.Separator" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/search_separator_color</item>
+        <item name="android:layout_marginBottom">@dimen/separator_margin</item>
+        <item name="android:layout_marginTop">@dimen/separator_margin</item>
+    </style>
+
+    <style name="TextAppearance" parent="@android:style/TextAppearance" />
+
+    <style name="TextAppearance.SearchDemo" />
+
+    <style name="TextAppearance.SearchDemo.SearchSettings">
+        <item name="android:textColor">@color/demo_search_settings_black_text</item>
+        <item name="android:textSize">@dimen/search_settings_text_size</item>
+    </style>
+    <style name="TextAppearance.SearchDemo.MessageTextAppearance">
+        <item name="android:textColor">@color/demo_search_bar_message_text_color</item>
+        <item name="android:textSize">@dimen/search_bar_demo_message_text_size</item>
+    </style>
+
+</resources>

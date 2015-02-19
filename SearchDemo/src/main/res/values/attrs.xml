@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SearchBarView">
+        <attr name="displayText" format="string" />
+        <attr name="voiceSearchEnabled" format="boolean" />
+    </declare-styleable>
+
+</resources>
