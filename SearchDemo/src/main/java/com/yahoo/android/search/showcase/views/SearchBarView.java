@@ -43,15 +43,10 @@ public class SearchBarView extends RelativeLayout {
     }
 
     private void init(AttributeSet attrs) {
-        TypedArray a = getContext().getTheme().obtainStyledAttributes(
-                attrs,
-                R.styleable.SearchBarView,
-                0, 0);
-
+        TypedArray a = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.SearchBarView, 0, 0);
         mDisplayText = a.getString(R.styleable.SearchBarView_displayText);
         isVoiceSearchEnabled = a.getBoolean(R.styleable.SearchBarView_voiceSearchEnabled, false);
         a.recycle();
-
         LayoutInflater.from(getContext()).inflate(R.layout.search_bar_view_layout, this, true);
         setBackgroundColor(getResources().getColor(R.color.white));
     }

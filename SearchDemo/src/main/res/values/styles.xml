@@ -37,4 +37,17 @@
         <item name="android:textSize">@dimen/search_bar_demo_message_text_size</item>
     </style>
 
+    <style name="DemoSearchTabs">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/search_tab_standard</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CustomTheme" parent="android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_image</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
 </resources>

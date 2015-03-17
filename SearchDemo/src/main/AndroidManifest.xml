@@ -34,6 +34,12 @@
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
 
         <activity
+            android:name=".CustomBgSearchActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+
+        <activity
             android:name="com.yahoo.mobile.client.share.search.ui.activity.ImageGalleryActivity"
             android:windowSoftInputMode="stateHidden" />
 

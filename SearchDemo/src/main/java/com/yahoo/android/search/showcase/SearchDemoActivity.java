@@ -22,8 +22,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.yahoo.android.search.showcase.fragment.NavigationDrawerFragment;
 
 
-public class SearchDemoActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class SearchDemoActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -45,14 +44,11 @@ public class SearchDemoActivity extends ActionBarActivity
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
         ImageLoader.getInstance().init(config);
 
-        mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
+        mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
         // Set up the drawer.
-        mNavigationDrawerFragment.setUp(
-                R.id.navigation_drawer,
-                (DrawerLayout) findViewById(R.id.drawer_layout));
+        mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
     }
 
     @Override
@@ -63,9 +59,7 @@ public class SearchDemoActivity extends ActionBarActivity
         mTitle = title;
 
         FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, demoFragment)
-                .commit();
+        fragmentManager.beginTransaction().replace(R.id.container, demoFragment).commit();
     }
 
     public void restoreActionBar() {

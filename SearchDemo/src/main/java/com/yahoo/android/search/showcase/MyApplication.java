@@ -15,7 +15,7 @@ import com.yahoo.mobile.client.share.search.util.SafeSearchEnum;
 
 public class MyApplication extends Application {
 
-    private static final String USE_YOUR_DEVELOPER_KEY_HERE = "bossValid";
+    private static final String USE_YOUR_DEVELOPER_KEY_HERE = "invalid";
 
     @Override
     public void onCreate() {

@@ -29,8 +29,6 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
 import com.yahoo.android.search.showcase.R;
 import com.yahoo.android.search.showcase.views.SearchSettingsView;
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
-import com.yahoo.mobile.client.share.search.ui.activity.BaseShareActivity;
-import com.yahoo.mobile.client.share.search.ui.activity.BaseShareActivity.ShareActivityError;
 import com.yahoo.mobile.client.share.search.ui.activity.SearchToLinkActivity;
 
 public class SearchToLinkFragment extends Fragment {
@@ -136,9 +134,9 @@ public class SearchToLinkFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_CANCELED) {
-            if (data != null && data.hasExtra(BaseShareActivity.SHARE_ERROR_CODE)) {
-                ShareActivityError errorCode = (ShareActivityError) data.getExtras().get(BaseShareActivity.SHARE_ERROR_CODE);
-                String message = data.getStringExtra(BaseShareActivity.SHARE_ERROR_MESSAGE);
+            if (data != null && data.hasExtra(SearchToLinkActivity.SHARE_ERROR_CODE)) {
+                SearchToLinkActivity errorCode = (SearchToLinkActivity) data.getExtras().get(SearchToLinkActivity.SHARE_ERROR_CODE);
+                String message = data.getStringExtra(SearchToLinkActivity.SHARE_ERROR_MESSAGE);
                 // Handle errorCode and the errorMesage
                 Log.e(TAG, "Error in onActivityResult: " + message + " Error code: " + errorCode);
             }

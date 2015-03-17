@@ -13,4 +13,25 @@
     <color name="demo_navigation_drawer_background">#FFFFFF</color>
     <color name="demo_button_pressed_color">#8252B3</color>
 
+    <!-- white theme -->
+    <color name="demo_search_tab_selected">#400090</color>
+    <color name="demo_search_tab_standard">#AAAAAA</color>
+    <color name="demo_search_tab_border">#d5d5d5</color>
+    <color name="demo_search_tab_selected_bg">#ffe0e0e0</color>
+    <color name="demo_search_tab_unselected_bg">#ffffffff</color>
+
+    <!-- dark theme -->
+    <color name="demo_search_tab_text_selected_white">#ffffffff</color>
+    <color name="demo_search_tab_text_unselected_white">#fffafafa</color>
+    <color name="demo_search_tab_dark_theme_selected_bg">#ff424242</color>
+    <color name="demo_search_tab_dark_theme_unselected_bg">#19191B</color>
+    <color name="demo_searchbar_dark_theme_bg">#19191B</color>
+
+    <!-- midnight blue theme -->
+    <color name="demo_searchbar_midnight_theme_bg">#6F8BBF</color>
+    <color name="demo_search_tab_text_unselected_blue">#6F8BBF</color>
+    <color name="demo_search_tab_text_selected_blue">#FFFFFF</color>
+    <color name="demo_search_tab_blue_theme_selected_bg">#5E76A2</color>
+    <color name="demo_search_tab_blue_theme_unselected_bg">#6F8BBF</color>
+
 </resources>

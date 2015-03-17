@@ -16,6 +16,9 @@
     <string name="demo_search">Search</string>
     <string name="demo_search_images">Search Images</string>
     <string name="demo_search_media">Search Media</string>
+    <string name="demo_search_white_theme">Search in White Theme</string>
+    <string name="demo_search_dark_theme">Search in Dark Theme</string>
+    <string name="demo_search_transparent_theme">Search in Transparent Theme</string>
     <string name="demo_search_settings_result">Results (Select one or more types)</string>
 
     <string name="demo_search_result_all">All</string>
@@ -27,6 +30,8 @@
     <string name="demo_content_suggest_message">Searches can be pre-populated with specific terms, to facilitate user exploration.</string>
     <string name="demo_search_settings_message">Here are a list of settings configurable within the Search SDK, which may or may not be highlighted in the rest of this demo app. You can change the settings to see the effect on the search experience</string>
     <string name="demo_search_to_link_message">The Search SDK supports a primary action that returns a web result as an object. This object can be copied into the app as a link</string>
+    <string name="demo_search_themes_message">The Search SDK entry points and frames can be fully customized to match the UI elements of your app. The following are just few examples.
+        Please refer to the Search SDK official documentation for a full list of recommended style guidelines.</string>
 
     <string name="search_assist">Search Assist</string>
     <string name="voice_search">Voice Search</string>
@@ -55,6 +60,7 @@
         <item android:id="@+id/search_bar_demo">Search Bar</item>
         <item android:id="@+id/content_suggest">Content Suggest</item>
         <item android:id="@+id/search_to_link">Search to Link</item>
+        <item android:id="@+id/search_to_link">Themes</item>
         <item android:id="@+id/search_settings">Settings</item>
         <!--<item android:id="@+id/search_themes">Themes</item>-->
         <!--<item android:id="@+id/search_help">Help</item>-->
