@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.yahoo.mobile.client.share.search.interfaces.IFooterViewHolder;
+import com.yahoo.mobile.client.share.search.interfaces.ISearchVertical;
 import com.yahoo.mobile.client.share.search.interfaces.ITabController;
 import java.util.List;
 
@@ -14,19 +15,23 @@ public abstract class CustomBaseFooterViewHolder extends LinearLayout implements
 
     public static final float EPS = 0.0001f;
     private ITabController mTabController;
-    private List<String> mTabList;
+    private List<ISearchVertical> mTabList;
     private int currentTab;
+    private Context mContext;
 
     public CustomBaseFooterViewHolder(Context context) {
         super(context);
+        mContext = context;
     }
 
     public CustomBaseFooterViewHolder(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
     }
 
     public CustomBaseFooterViewHolder(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        mContext = context;
     }
 
     /** ITabViewHolder methods. Required methods that implement Interface from SDK. */
@@ -37,12 +42,12 @@ public abstract class CustomBaseFooterViewHolder extends LinearLayout implements
     }
 
     @Override
-    public void setTabs(List<String> tabs) {
+    public void setTabs(List<ISearchVertical> tabs) {
         createTabBar(tabs);
     }
 
     @Override
-    public void addTab(String tab) {
+    public void addTab(ISearchVertical tab) {
         mTabList.add(tab);
         createTabBar(mTabList);
     }
@@ -62,8 +67,13 @@ public abstract class CustomBaseFooterViewHolder extends LinearLayout implements
     public void onClick(View v) {
         if(v instanceof TextView) {
             String tabName = ((TextView) v).getText().toString();
-            currentTab = mTabList.indexOf(tabName);
-            if(currentTab > -1) {
+            for (ISearchVertical i: mTabList) {
+                if (i.getLabel(mContext).equals(tabName)) {
+                    currentTab = mTabList.indexOf(i);
+                    break;
+                }
+            }
+            if (currentTab > -1) {
                 mTabController.changeTab(currentTab);
             }
         }
@@ -74,7 +84,7 @@ public abstract class CustomBaseFooterViewHolder extends LinearLayout implements
      *
      */
 
-    public void setCustomTabList(List<String> tabList) {
+    public void setCustomTabList(List<ISearchVertical> tabList) {
         mTabList = tabList;
     }
 
@@ -82,7 +92,7 @@ public abstract class CustomBaseFooterViewHolder extends LinearLayout implements
         return mTabController;
     }
 
-    protected void createTabBar(List<String> tabs) {}
+    protected void createTabBar(List<ISearchVertical> tabs) {}
 
     protected void setTabContainerHeight(int height) {
         ViewGroup.LayoutParams params = getLayoutParams();

@@ -1,0 +1,14 @@
+<ListView
+    android:id="@+id/tumblrFeed"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/tumblr_data_top_padding"
+    android:paddingLeft="@dimen/tumblr_data_padding"
+    android:paddingRight="@dimen/tumblr_data_padding"
+    android:choiceMode="singleChoice"
+    android:divider="@color/demo_tumblr_bg"
+    android:dividerHeight="@dimen/tumblr_data_padding"
+    android:background="@color/demo_tumblr_fragment_bg"
+    tools:context=".NavigationDrawerFragment"/>

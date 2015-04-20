@@ -12,6 +12,7 @@ package com.yahoo.android.search.showcase;
 import android.app.Fragment;
 
 import com.yahoo.android.search.showcase.fragment.ContentSuggestDemoFragment;
+import com.yahoo.android.search.showcase.fragment.CustomTabsSelectionFragment;
 import com.yahoo.android.search.showcase.fragment.SearchBarDemoFragment;
 import com.yahoo.android.search.showcase.fragment.SearchSettingsFragment;
 import com.yahoo.android.search.showcase.fragment.SearchToLinkFragment;
@@ -34,6 +35,9 @@ public class SearchDemoFragmentFactory {
                 ThemeSelectionFragment themeSelectionFragment = new ThemeSelectionFragment();
                 return themeSelectionFragment;
             case 5:
+                CustomTabsSelectionFragment customTabsSelectionFragment = new CustomTabsSelectionFragment();
+                return customTabsSelectionFragment;
+            case 6:
                 SearchSettingsFragment searchSettingsFragment = new SearchSettingsFragment();
                 return searchSettingsFragment;
             default:

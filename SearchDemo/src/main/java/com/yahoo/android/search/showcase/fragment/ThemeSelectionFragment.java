@@ -12,6 +12,7 @@ import com.yahoo.android.search.showcase.CustomBgSearchActivity;
 import com.yahoo.android.search.showcase.R;
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
 import com.yahoo.mobile.client.share.search.ui.activity.SearchActivity;
+import com.yahoo.mobile.client.share.search.ui.activity.SearchToLinkActivity;
 
 public class ThemeSelectionFragment extends Fragment {
 
@@ -64,10 +65,14 @@ public class ThemeSelectionFragment extends Fragment {
      */
     private void launchWhiteThemeSearch() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(), SearchActivity.class);
-        intent.putExtra(SearchActivity.HEADER_RESOURCE_KEY, R.layout.search_view_custom_header_white);
-        intent.putExtra(SearchActivity.FOOTER_RESOURCE_KEY, R.layout.search_view_custom_footer_white);
-        startActivity(intent);
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+        builder.addWebVertical();
+        builder.addImageVertical();
+        builder.addVideoVertical();
+        builder.setCustomHeader(R.layout.search_view_custom_header_white);
+        builder.setCustomFooter(R.layout.search_view_custom_footer_white);
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
     }
 
     /**
@@ -75,10 +80,14 @@ public class ThemeSelectionFragment extends Fragment {
      */
     private void launchDarkThemeSearch() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(), SearchActivity.class);
-        intent.putExtra(SearchActivity.HEADER_RESOURCE_KEY, R.layout.search_view_custom_header_dark);
-        intent.putExtra(SearchActivity.FOOTER_RESOURCE_KEY, R.layout.search_view_custom_footer_dark);
-        startActivity(intent);
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+        builder.setCustomHeader( R.layout.search_view_custom_header_dark);
+        builder.setCustomFooter( R.layout.search_view_custom_footer_dark);
+        builder.addWebVertical();
+        builder.addImageVertical();
+        builder.addVideoVertical();
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
     }
 
     /**
@@ -86,9 +95,13 @@ public class ThemeSelectionFragment extends Fragment {
      */
     private void launchTransparentThemeSearch() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(), CustomBgSearchActivity.class);
-        intent.putExtra(SearchActivity.HEADER_RESOURCE_KEY, R.layout.search_view_custom_header_blue);
-        intent.putExtra(SearchActivity.FOOTER_RESOURCE_KEY, R.layout.search_view_custom_footer_blue);
-        startActivity(intent);
+        CustomBgSearchActivity.IntentBuilder builder = new CustomBgSearchActivity.IntentBuilder();
+        builder.addWebVertical();
+        builder.addImageVertical();
+        builder.addVideoVertical();
+        builder.setCustomHeader(R.layout.search_view_custom_header_blue);
+        builder.setCustomFooter(R.layout.search_view_custom_footer_blue);
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
     }
 }

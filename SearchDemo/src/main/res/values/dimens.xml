@@ -9,6 +9,10 @@
     <dimen name="navigation_drawer_item_margin">20dp</dimen>
     <dimen name="navigation_drawer_item_text_size">16sp</dimen>
 
+    <dimen name="tumblr_data_margin">5dp</dimen>
+    <dimen name="tumblr_data_padding">15dp</dimen>
+    <dimen name="tumblr_data_top_padding">70dp</dimen>
+
     <dimen name="search_settings_text_size">13sp</dimen>
     <dimen name="search_settings_autofill_edit_text_size">14sp</dimen>
     <dimen name="search_settings_switch_text_size">15sp</dimen>

@@ -64,31 +64,36 @@ public class SearchSettingsFragment extends Fragment {
         // Enable/Disable Search Assist based on switch setting
         SearchSDKSettings.setSearchSuggestEnabled(mSearchAssistSwitch.isChecked());
 
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+
         // Check what tabs need to be displayed
         int tabsToDisplay = 0;
         if (mWebSearchCheckbox.isChecked()) {
-            tabsToDisplay = SearchSDKSettings.TYPE_WEB;
+            builder.addWebVertical();
         }
         if (mImageSearchCheckbox.isChecked()) {
-            tabsToDisplay = tabsToDisplay | SearchSDKSettings.TYPE_IMAGE;
+            builder.addImageVertical();
         }
         if (mVideoSearchCheckbox.isChecked()) {
-            tabsToDisplay = tabsToDisplay | SearchSDKSettings.TYPE_VIDEO;
+            builder.addVideoVertical();
         }
 
         String autoFillSearchQuery = mAutoFillSearchEditText.getText().toString();
 
-        Intent intent = new Intent(getActivity(), SearchActivity.class);
         // Default tabs if none of the boxes are checked
         if (tabsToDisplay != 0) {
-            intent.putExtra(TABS, tabsToDisplay);
+            builder.addWebVertical();
+            builder.addImageVertical();
+            builder.addVideoVertical();
         }
 
         if (!TextUtils.isEmpty(autoFillSearchQuery)) {
             // Search for predefined query
-            intent.putExtra(SearchActivity.QUERY_STRING, autoFillSearchQuery);
+            builder.setQueryString(autoFillSearchQuery);
         }
-        startActivity(intent);
+
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
     }
 
 }

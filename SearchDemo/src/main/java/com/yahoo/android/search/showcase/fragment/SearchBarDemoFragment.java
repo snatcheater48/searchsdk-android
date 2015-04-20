@@ -19,8 +19,11 @@ import android.widget.Button;
 import com.yahoo.android.search.showcase.R;
 import com.yahoo.android.search.showcase.views.SearchBarView;
 import com.yahoo.android.search.showcase.views.SearchSettingsView;
+
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
 import com.yahoo.mobile.client.share.search.ui.activity.SearchActivity;
+import com.yahoo.mobile.client.share.search.ui.activity.TrendingSearchEnum;
+
 
 public class SearchBarDemoFragment extends Fragment {
 
@@ -93,8 +96,14 @@ public class SearchBarDemoFragment extends Fragment {
      */
     private void launchAllEnabledSearch() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(), SearchActivity.class);
-        startActivity(intent);
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+        //Trending suggestions are available with valid appID.
+        builder.setTrendingCategory(TrendingSearchEnum.SPORTS);
+        builder.addWebVertical();
+        builder.addImageVertical();
+        builder.addVideoVertical();
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
     }
 
     /**
@@ -102,10 +111,11 @@ public class SearchBarDemoFragment extends Fragment {
      */
     private void launchMediaSearch() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(), SearchActivity.class);
-        // Show both the Image and video Tab
-        intent.putExtra(TABS, SearchSDKSettings.TYPE_IMAGE | SearchSDKSettings.TYPE_VIDEO);
-        startActivity(intent);
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+        builder.addImageVertical();
+        builder.addVideoVertical();
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
     }
 
     /**
@@ -113,9 +123,10 @@ public class SearchBarDemoFragment extends Fragment {
      */
     private void launchImageSearch() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(), SearchActivity.class);
-        // Show only the Images tab for the search query
-        intent.putExtra(TABS, SearchSDKSettings.TYPE_IMAGE);
-        startActivity(intent);
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+        builder.addImageVertical();
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
     }
+
 }

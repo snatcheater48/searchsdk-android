@@ -78,10 +78,15 @@ public class ContentSuggestDemoFragment extends Fragment {
      */
     private void launchSearchForAugmentedReality() {
         SearchSDKSettings.setSearchSuggestEnabled(false);
-        Intent intent = new Intent(getActivity(), SearchActivity.class);
         // Search for a predefined query "Augmented Reality" with all tabs enabled
-        intent.putExtra(SearchActivity.QUERY_STRING, AUGMENTED_REALITY);
-        startActivity(intent);
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+        builder.addWebVertical();
+        builder.addImageVertical();
+        builder.addVideoVertical();
+        builder.setQueryString(AUGMENTED_REALITY);
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
+
     }
 
     /**
@@ -89,12 +94,13 @@ public class ContentSuggestDemoFragment extends Fragment {
      */
     private void launchImageSearchForCats() {
         SearchSDKSettings.setSearchSuggestEnabled(false);
-        Intent intent = new Intent(getActivity(), SearchActivity.class);
         // Search for predefined query "Cats"
-        intent.putExtra(SearchActivity.QUERY_STRING, CATS);
         // Show only the Images tab for the search query
-        intent.putExtra(TABS, SearchSDKSettings.TYPE_IMAGE);
-        startActivity(intent);
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+        builder.addImageVertical();
+        builder.setQueryString(CATS);
+        Intent i = builder.buildIntent(getActivity());
+        startActivity(i);
     }
 
 }

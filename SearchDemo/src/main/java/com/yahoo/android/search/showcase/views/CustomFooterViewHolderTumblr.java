@@ -16,24 +16,24 @@ import com.yahoo.mobile.client.share.search.interfaces.ISearchVertical;
 import java.util.List;
 
 
-public class CustomFooterViewHolderBlue extends CustomBaseFooterViewHolder {
+public class CustomFooterViewHolderTumblr extends CustomBaseFooterViewHolder {
 
     private List<ISearchVertical> mTabList;
     private int mTabWidth = 0;
     private View mTabIndicator;
     private Context mContext = null;
 
-    public CustomFooterViewHolderBlue(Context context) {
+    public CustomFooterViewHolderTumblr(Context context) {
         super(context);
         mContext = context;
     }
 
-    public CustomFooterViewHolderBlue(Context context, AttributeSet attrs) {
+    public CustomFooterViewHolderTumblr(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
     }
 
-    public CustomFooterViewHolderBlue(Context context, AttributeSet attrs, int defStyle) {
+    public CustomFooterViewHolderTumblr(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mContext = context;
     }
@@ -77,9 +77,9 @@ public class CustomFooterViewHolderBlue extends CustomBaseFooterViewHolder {
         if (mTabList != null) {
             for (int i = 0; i < mTabList.size(); i++) {
                 if (i == position) {
-                    updateTabTextColor(i, getResources().getColor(R.color.demo_search_tab_text_selected_blue), true);
+                    updateTabTextColor(i, getResources().getColor(R.color.white), true);
                 } else {
-                    updateTabTextColor(i, getResources().getColor(R.color.demo_search_tab_standard), false);
+                    updateTabTextColor(i, getResources().getColor(R.color.demo_tumblr_unselected_text), false);
                 }
             }
         }
@@ -95,11 +95,7 @@ public class CustomFooterViewHolderBlue extends CustomBaseFooterViewHolder {
         if (tv != null) {
             tv.setTextColor(color);
             tv.setTypeface(null, Typeface.BOLD);
-            if (selected) {
-                tv.setBackgroundColor(getResources().getColor(R.color.demo_search_tab_blue_theme_selected_bg));
-            } else {
-                tv.setBackgroundColor(getResources().getColor(R.color.demo_search_tab_blue_theme_unselected_bg));
-            }
+            tv.setBackgroundColor(getResources().getColor(R.color.demo_tumblr_footer_bg));
         }
 
     }

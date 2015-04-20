@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_white_border">
+
+    <TextView
+        android:id="@+id/t_blogname"
+        android:layout_margin="@dimen/tumblr_data_margin"
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/navigation_drawer_item_text_size"
+        android:textColor="@android:color/black"
+        android:text="afterrushhour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/t_photo"
+        android:layout_margin="@dimen/tumblr_data_margin"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <TextView
+        android:id="@+id/t_caption"
+        android:layout_margin="@dimen/tumblr_data_margin"
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/navigation_drawer_item_text_size"
+        android:text="Its getting better"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/t_tags"
+        android:layout_margin="@dimen/tumblr_data_margin"
+        android:paddingLeft="10dp"
+        android:text="#Yahoo #TVShow"
+        android:textSize="@dimen/navigation_drawer_item_text_size"
+        android:textColor="@android:color/darker_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

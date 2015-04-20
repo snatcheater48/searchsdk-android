@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.yahoo.android.search.showcase.R;
 import com.yahoo.android.search.showcase.Utils.Utils;
+import com.yahoo.mobile.client.share.search.interfaces.ISearchVertical;
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
 
 import java.util.List;
@@ -18,33 +19,38 @@ import java.util.List;
 
 public class CustomFooterViewHolderDark extends CustomBaseFooterViewHolder {
 
-    private List<String> mTabList;
+    private List<ISearchVertical> mTabList;
     private int mTabWidth = 0;
     private View mTabIndicator;
+    private Context mContext = null;
 
     public CustomFooterViewHolderDark(Context context) {
         super(context);
+        mContext = context;
     }
 
     public CustomFooterViewHolderDark(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
     }
 
     public CustomFooterViewHolderDark(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        mContext = context;
     }
 
     @Override
-    protected void createTabBar(List<String> tabs) {
+    protected void createTabBar(List<ISearchVertical> tabs) {
         mTabList = tabs;
         setCustomTabList(tabs);
         LayoutInflater inflater =  (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         LinearLayout labelContainer = (LinearLayout) findViewById(R.id.search_tab_label_container);
         labelContainer.removeAllViews();
         int index = 0;
-        for (String tabName : mTabList) {
+        for (int counter = 0; counter < mTabList.size(); counter++) {
             LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.demo_search_tab_with_icon, null);
             TextView tv = (TextView) linearLayout.findViewById(R.id.tab_text);
+            String tabName = mTabList.get(counter).getLabel(mContext);
             tv.setText(tabName);
             LayoutParams lp = new LayoutParams(0, LayoutParams.MATCH_PARENT);
             lp.weight = 1;

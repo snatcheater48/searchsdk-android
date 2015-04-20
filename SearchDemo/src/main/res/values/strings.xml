@@ -43,6 +43,9 @@
     <string name="demo_web">Web</string>
     <string name="demo_images">Images</string>
     <string name="demo_video">Video</string>
+    <string name="demo_custom_tab_text">Design custom tabs to seamlessly integrate app-specific search results within an elegant tab bar.</string>
+    <string name="demo_tumblr_web">Tumblr + Web</string>
+    <string name="demo_web_image_video_tumblr">Web + Image + Video + Tumblr</string>
     <string name="demo_preview">Preview</string>
 
     <!--Search to link Screen-->
@@ -60,7 +63,8 @@
         <item android:id="@+id/search_bar_demo">Search Bar</item>
         <item android:id="@+id/content_suggest">Content Suggest</item>
         <item android:id="@+id/search_to_link">Search to Link</item>
-        <item android:id="@+id/search_to_link">Themes</item>
+        <item android:id="@+id/themes">Themes</item>
+        <item android:id="@+id/custom_tabs">Custom Tabs</item>
         <item android:id="@+id/search_settings">Settings</item>
         <!--<item android:id="@+id/search_themes">Themes</item>-->
         <!--<item android:id="@+id/search_help">Help</item>-->

@@ -30,11 +30,12 @@ import com.yahoo.android.search.showcase.R;
 import com.yahoo.android.search.showcase.views.SearchSettingsView;
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
 import com.yahoo.mobile.client.share.search.ui.activity.SearchToLinkActivity;
+import com.yahoo.mobile.client.share.search.ui.activity.TrendingSearchEnum;
 
 public class SearchToLinkFragment extends Fragment {
 
     private static final String TAG = SearchToLinkFragment.class.getSimpleName();
-    private static final int REQUEST_CODE = 101;
+    private static final int REQUEST_CODE_SEARCH_TO_LINK = 100;
     private static final String SEPARATOR = " : ";
     private static final String NEW_LINE = "\n \n";
 
@@ -102,9 +103,12 @@ public class SearchToLinkFragment extends Fragment {
      */
     private void launchSearchForLinkWebActivity() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(),
-                SearchToLinkActivity.class);
-        startActivityForResult(intent, REQUEST_CODE);
+        SearchToLinkActivity.IntentBuilder builder = new SearchToLinkActivity.IntentBuilder();
+        //Trending suggestions are available with valid appID.
+        builder.setTrendingCategory(TrendingSearchEnum.DEFAULT);
+        builder.addWebVertical();
+        Intent i = builder.buildIntent(getActivity());
+        startActivityForResult(i, REQUEST_CODE_SEARCH_TO_LINK);
     }
 
     /**
@@ -112,10 +116,10 @@ public class SearchToLinkFragment extends Fragment {
      */
     private void launchSearchforImageActivity() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(),
-                SearchToLinkActivity.class);
-        intent.putExtra(SearchToLinkActivity.TABS, SearchSDKSettings.TYPE_IMAGE);
-        startActivityForResult(intent, REQUEST_CODE);
+        SearchToLinkActivity.IntentBuilder builder = new SearchToLinkActivity.IntentBuilder();
+        builder.addImageVertical();
+        Intent i = builder.buildIntent(getActivity());
+        startActivityForResult(i, REQUEST_CODE_SEARCH_TO_LINK);
     }
 
     /**
@@ -123,12 +127,11 @@ public class SearchToLinkFragment extends Fragment {
      */
     private void launchSearchforVideoActivity() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        Intent intent = new Intent(getActivity(),
-                SearchToLinkActivity.class);
-        intent.putExtra(SearchToLinkActivity.TABS, SearchSDKSettings.TYPE_VIDEO);
-        startActivityForResult(intent, REQUEST_CODE);
+        SearchToLinkActivity.IntentBuilder builder = new SearchToLinkActivity.IntentBuilder();
+        builder.addVideoVertical();
+        Intent i = builder.buildIntent(getActivity());
+        startActivityForResult(i, REQUEST_CODE_SEARCH_TO_LINK);
     }
-
 
     // Search to Link Result Handling
     @Override
@@ -140,7 +143,7 @@ public class SearchToLinkFragment extends Fragment {
                 // Handle errorCode and the errorMesage
                 Log.e(TAG, "Error in onActivityResult: " + message + " Error code: " + errorCode);
             }
-        } else if (requestCode == REQUEST_CODE) {
+        } else if (requestCode == REQUEST_CODE_SEARCH_TO_LINK) {
             if (resultCode == Activity.RESULT_OK) {
                 Bundle bundle = data.getBundleExtra(SearchToLinkActivity.SHARE_BUNDLE);
                 int type = bundle.getInt(SearchToLinkActivity.SHARED_OBJECT_TYPE);
