@@ -8,11 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.yahoo.android.search.showcase.CustomBgSearchActivity;
 import com.yahoo.android.search.showcase.R;
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
 import com.yahoo.mobile.client.share.search.ui.activity.SearchActivity;
-import com.yahoo.mobile.client.share.search.ui.activity.SearchToLinkActivity;
 
 public class ThemeSelectionFragment extends Fragment {
 
@@ -95,7 +93,8 @@ public class ThemeSelectionFragment extends Fragment {
      */
     private void launchTransparentThemeSearch() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
-        CustomBgSearchActivity.IntentBuilder builder = new CustomBgSearchActivity.IntentBuilder();
+        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
+        builder.showTransparentBackground(true);
         builder.addWebVertical();
         builder.addImageVertical();
         builder.addVideoVertical();

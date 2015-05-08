@@ -94,6 +94,16 @@ public class CustomTumblrFragment extends SearchResultFragment implements Conten
 
     }
 
+    /**
+     * Apply background color for search results view.
+     * @param color
+     */
+
+    @Override
+    public void setBackgroundColor(int color) {
+
+    }
+
     @Override
     public IQueryManager getContentManager() {
         return null;

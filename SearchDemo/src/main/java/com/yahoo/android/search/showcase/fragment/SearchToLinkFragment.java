@@ -107,6 +107,10 @@ public class SearchToLinkFragment extends Fragment {
         //Trending suggestions are available with valid appID.
         builder.setTrendingCategory(TrendingSearchEnum.DEFAULT);
         builder.addWebVertical();
+        builder.addImageVertical();
+        builder.addVideoVertical();
+        //  Preview is enabled by default. To exclusively disable preview.
+        //  builder.setWebPreviewEnabled(false);
         Intent i = builder.buildIntent(getActivity());
         startActivityForResult(i, REQUEST_CODE_SEARCH_TO_LINK);
     }
@@ -118,6 +122,8 @@ public class SearchToLinkFragment extends Fragment {
         SearchSDKSettings.setSearchSuggestEnabled(true);
         SearchToLinkActivity.IntentBuilder builder = new SearchToLinkActivity.IntentBuilder();
         builder.addImageVertical();
+        //  Preview is enabled by default. To exclusively disable preview.
+        //  builder.setImagePreviewEnabled(false);
         Intent i = builder.buildIntent(getActivity());
         startActivityForResult(i, REQUEST_CODE_SEARCH_TO_LINK);
     }
@@ -129,6 +135,8 @@ public class SearchToLinkFragment extends Fragment {
         SearchSDKSettings.setSearchSuggestEnabled(true);
         SearchToLinkActivity.IntentBuilder builder = new SearchToLinkActivity.IntentBuilder();
         builder.addVideoVertical();
+        //  Preview is enabled by default. To exclusively disable preview.
+        //  builder.setWebPreviewEnabled(false);
         Intent i = builder.buildIntent(getActivity());
         startActivityForResult(i, REQUEST_CODE_SEARCH_TO_LINK);
     }
