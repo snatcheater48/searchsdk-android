@@ -27,7 +27,7 @@
 
         <ImageView
             android:id="@+id/demo_two_tabs"
-            android:src="@drawable/tumblr_search_xh"
+            android:src="@drawable/tumblr_search"
             android:layout_margin="@dimen/search_bar_margin"
             android:layout_width="match_parent"
             android:layout_height="@dimen/search_bar_height" />
@@ -42,7 +42,7 @@
 
         <ImageView
             android:id="@+id/demo_four_tabs"
-            android:src="@drawable/tumblr_search_xh"
+            android:src="@drawable/tumblr_search"
             android:layout_margin="30dp"
             android:layout_gravity="center"
             android:layout_width="match_parent"

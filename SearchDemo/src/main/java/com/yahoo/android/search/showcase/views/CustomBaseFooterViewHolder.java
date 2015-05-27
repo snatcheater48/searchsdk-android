@@ -58,8 +58,12 @@ public abstract class CustomBaseFooterViewHolder extends LinearLayout implements
         //if it is almost an integer value
         if (Math.abs(position - intValue) < EPS) {
             setSelectedIndex(intValue);
+        } else {
+            updateIndicatorPosition(position);
         }
     }
+
+    protected abstract void updateIndicatorPosition(float position);
 
     /** Method for onClick behavior of tab */
 

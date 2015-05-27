@@ -70,5 +70,8 @@
         <!--<item android:id="@+id/search_help">Help</item>-->
         <!--<item android:id="@+id/search_terms_conditions">Terms and Conditions</item>-->
     </string-array>
+    <string name="title_activity_launcher_demo">LauncherDemoActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>

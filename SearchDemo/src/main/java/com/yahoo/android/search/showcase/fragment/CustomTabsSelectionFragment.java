@@ -69,7 +69,7 @@ public class CustomTabsSelectionFragment extends Fragment {
     private void launchFourCustomTabs() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
         SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
-        builder.setQueryString("gif");
+        builder.setQueryString("yahoo");
         //Trending suggestions are available with valid appID.
         builder.setTrendingCategory(TrendingSearchEnum.SPORTS);
         builder.addWebVertical();
@@ -77,7 +77,6 @@ public class CustomTabsSelectionFragment extends Fragment {
         builder.addVideoVertical();
         builder.addVertical(CustomTumblrFragment.class.getName(), new Bundle());
         builder.setCustomHeader(R.layout.search_view_custom_header_tumblr);
-        builder.setCustomFooter(R.layout.search_view_custom_footer_tumblr);
         Intent i = builder.buildIntent(getActivity());
         startActivity(i);
     }

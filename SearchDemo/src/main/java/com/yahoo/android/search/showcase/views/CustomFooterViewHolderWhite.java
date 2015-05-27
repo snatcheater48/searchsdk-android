@@ -82,6 +82,7 @@ public class CustomFooterViewHolderWhite extends CustomBaseFooterViewHolder {
                     updateTabTextColor(i, getResources().getColor(R.color.demo_search_tab_standard), false);
                 }
             }
+            updateIndicatorPosition(position);
         }
     }
 
@@ -108,7 +109,7 @@ public class CustomFooterViewHolderWhite extends CustomBaseFooterViewHolder {
      * Use this method to highlight/customize tab indicator.
      */
 
-    private void updateIndicatorPosition(float position) {
+    protected void updateIndicatorPosition(float position) {
         mTabIndicator.setTranslationX(position * mTabWidth);
     }
 

@@ -38,7 +38,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginRight="16dp"
         android:padding="8dp"
-        android:src="@drawable/ic_clear_button_xh"
+        android:src="@drawable/ic_clear_button"
         android:tint="#ffbdbdbd"/>
 
 </com.yahoo.android.search.showcase.views.CustomSearchViewHolder>

@@ -85,6 +85,7 @@ public class CustomFooterViewHolderDark extends CustomBaseFooterViewHolder {
                     updateTabContent(i, getResources().getColor(R.color.demo_search_tab_text_unselected_white), false);
                 }
             }
+            updateIndicatorPosition(position);
         }
     }
 
@@ -125,7 +126,7 @@ public class CustomFooterViewHolderDark extends CustomBaseFooterViewHolder {
     /**
      *  Use this method to highlight/customize tab indicator.
      */
-    private void updateIndicatorPosition(float position) {
+    protected void updateIndicatorPosition(float position) {
         mTabIndicator.setTranslationX(position * mTabWidth);
     }
 

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.yahoo.android.search.showcase.LauncherDemoActivity;
 import com.yahoo.android.search.showcase.R;
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
 import com.yahoo.mobile.client.share.search.ui.activity.SearchActivity;
@@ -92,15 +93,7 @@ public class ThemeSelectionFragment extends Fragment {
      * Launch Search Activity with blue theme with background image.
      */
     private void launchTransparentThemeSearch() {
-        SearchSDKSettings.setSearchSuggestEnabled(true);
-        SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
-        builder.showTransparentBackground(true);
-        builder.addWebVertical();
-        builder.addImageVertical();
-        builder.addVideoVertical();
-        builder.setCustomHeader(R.layout.search_view_custom_header_blue);
-        builder.setCustomFooter(R.layout.search_view_custom_footer_blue);
-        Intent i = builder.buildIntent(getActivity());
+        Intent i = new Intent(this.getActivity(), LauncherDemoActivity.class);
         startActivity(i);
     }
 }

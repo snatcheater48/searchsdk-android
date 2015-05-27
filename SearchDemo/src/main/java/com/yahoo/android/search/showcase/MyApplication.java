@@ -33,7 +33,8 @@ public class MyApplication extends Application {
                 .initializeSearchSDKSettings(
                         new SearchSDKSettings.Builder(USE_YOUR_DEVELOPER_KEY_HERE)
                                 .setSafeSearch(SafeSearchEnum.STRICT)
-                                .setVoiceSearchEnabled(true));
+                                .setVoiceSearchEnabled(true)
+                                .setConsumptionModeEnabled(false));
     }
 
     /**

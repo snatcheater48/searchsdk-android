@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yahoo.android.search.showcase">
+    package="com.yahoo.android.search.showcase" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,15 +10,15 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/CustomAppTheme"
-        android:name=".MyApplication">
+        android:theme="@style/CustomAppTheme" >
         <activity
             android:name=".SearchDemoActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,35 +26,37 @@
             </intent-filter>
         </activity>
 
-        <!--Start: Search SDK Activities-->
+        <activity
+            android:name=".LauncherDemoActivity"
+            android:label="@string/title_activity_launcher_demo"
+            android:theme="@style/CustomTheme">
+        </activity>
+
+        <!-- Start: Search SDK Activities -->
         <activity
             android:name="com.yahoo.mobile.client.share.search.ui.activity.SearchActivity"
-            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomTheme"/>
-
+            android:theme="@style/SearchTheme"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.yahoo.mobile.client.share.search.ui.activity.ImageGalleryActivity"
-            android:windowSoftInputMode="stateHidden"
-            android:logo="@drawable/back_icon"
             android:label=""
-            android:theme="@style/SearchToLink.Preview"/>
-
+            android:logo="@drawable/back_icon"
+            android:theme="@style/SearchToLink.Preview"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.yahoo.mobile.client.share.search.ui.activity.SearchToLinkActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.yahoo.mobile.client.share.search.ui.activity.SearchBrowserActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:screenOrientation="portrait"
-            android:logo="@drawable/back_icon"
             android:label=""
-            android:theme="@style/SearchToLink.Preview" />
+            android:logo="@drawable/back_icon"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchToLink.Preview"
+            android:windowSoftInputMode="adjustPan" />
 
-        <!--End: Search SDK Activities-->
-
+        <!-- End: Search SDK Activities -->
     </application>
 
 </manifest>
