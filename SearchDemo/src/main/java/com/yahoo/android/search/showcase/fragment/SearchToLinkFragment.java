@@ -109,6 +109,7 @@ public class SearchToLinkFragment extends Fragment {
         builder.addWebVertical();
         builder.addImageVertical();
         builder.addVideoVertical();
+        builder.addLocalVertical();
         //  Preview is enabled by default. To exclusively disable preview.
         //  builder.setWebPreviewEnabled(false);
         Intent i = builder.buildIntent(getActivity());

@@ -14,6 +14,7 @@ import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.yahoo.mobile.client.share.search.location.SearchLocationManager;
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
 import com.yahoo.mobile.client.share.search.util.SafeSearchEnum;
 
@@ -29,12 +30,15 @@ public class MyApplication extends Application {
     }
 
     private void initializeSearchSDK() {
+        SearchLocationManager locationManager = new SearchLocationManager(this);
+        locationManager.requestUpdates();
         SearchSDKSettings
                 .initializeSearchSDKSettings(
                         new SearchSDKSettings.Builder(USE_YOUR_DEVELOPER_KEY_HERE)
                                 .setSafeSearch(SafeSearchEnum.STRICT)
                                 .setVoiceSearchEnabled(true)
-                                .setConsumptionModeEnabled(false));
+                                .setConsumptionModeEnabled(false)
+                                .setSearchLocationManager(locationManager));
     }
 
     /**

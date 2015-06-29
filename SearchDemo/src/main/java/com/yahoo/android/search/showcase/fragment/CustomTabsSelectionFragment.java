@@ -23,17 +23,21 @@ public class CustomTabsSelectionFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ImageView twoTabs = (ImageView) view.findViewById(R.id.demo_two_tabs);
+        ImageView threeTabs = (ImageView) view.findViewById(R.id.demo_three_tabs);
         ImageView fourTabs = (ImageView) view.findViewById(R.id.demo_four_tabs);
 
-        twoTabs.setOnClickListener(mTwoCustomTabsClickListener);
+
+        threeTabs.setOnClickListener(mThreeCustomTabsClickListener);
         fourTabs.setOnClickListener(mFourCustomTabsClickListener);
+
     }
 
-    private final View.OnClickListener mTwoCustomTabsClickListener = new View.OnClickListener() {
+
+
+    private final View.OnClickListener mThreeCustomTabsClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            launchTwoCustomTabs();
+            launchThreeCustomTabs();
         }
     };
 
@@ -44,23 +48,27 @@ public class CustomTabsSelectionFragment extends Fragment {
         }
     };
 
+
+
     /**
-     *  Tumblr + Web
+     *  Tumblr + Web + Local
      */
 
-    private void launchTwoCustomTabs() {
+    private void launchThreeCustomTabs() {
         SearchSDKSettings.setSearchSuggestEnabled(true);
         SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
-        builder.setQueryString("gif");
+        builder.setQueryString("tacos");
         //Trending suggestions are available with valid appID.
         builder.setTrendingCategory(TrendingSearchEnum.SPORTS);
         builder.addVertical(CustomTumblrFragment.class.getName(), new Bundle());
         builder.addWebVertical();
+        builder.addLocalVertical();
         builder.setCustomHeader(R.layout.search_view_custom_header_tumblr);
         builder.setCustomFooter(R.layout.search_view_custom_footer_tumblr);
         Intent i = builder.buildIntent(getActivity());
         startActivity(i);
     }
+
 
     /**
      *  Web + Images + Videos + Tumblr

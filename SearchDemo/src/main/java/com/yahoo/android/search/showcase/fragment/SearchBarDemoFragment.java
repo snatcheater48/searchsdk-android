@@ -20,6 +20,7 @@ import com.yahoo.android.search.showcase.R;
 import com.yahoo.android.search.showcase.views.SearchBarView;
 import com.yahoo.android.search.showcase.views.SearchSettingsView;
 
+import com.yahoo.mobile.client.share.search.ui.activity.*;
 import com.yahoo.mobile.client.share.search.settings.SearchSDKSettings;
 import com.yahoo.mobile.client.share.search.ui.activity.SearchActivity;
 import com.yahoo.mobile.client.share.search.ui.activity.TrendingSearchEnum;
@@ -102,6 +103,7 @@ public class SearchBarDemoFragment extends Fragment {
         builder.addWebVertical();
         builder.addImageVertical();
         builder.addVideoVertical();
+        builder.addLocalVertical();
         Intent i = builder.buildIntent(getActivity());
         startActivity(i);
     }

@@ -93,6 +93,7 @@ public class ThemeSelectionFragment extends Fragment {
      * Launch Search Activity with blue theme with background image.
      */
     private void launchTransparentThemeSearch() {
+
         Intent i = new Intent(this.getActivity(), LauncherDemoActivity.class);
         startActivity(i);
     }

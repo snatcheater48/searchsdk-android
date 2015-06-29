@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <string name="app_name">Search Demo</string>
+    <string name="showcase_app_name">Search Demo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
@@ -45,6 +45,7 @@
     <string name="demo_video">Video</string>
     <string name="demo_custom_tab_text">Design custom tabs to seamlessly integrate app-specific search results within an elegant tab bar.</string>
     <string name="demo_tumblr_web">Tumblr + Web</string>
+    <string name="demo_tumblr_web_local">Tumblr + Web + Local</string>
     <string name="demo_web_image_video_tumblr">Web + Image + Video + Tumblr</string>
     <string name="demo_preview">Preview</string>
 
