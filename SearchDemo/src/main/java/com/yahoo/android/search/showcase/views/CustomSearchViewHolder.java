@@ -68,4 +68,8 @@ public class CustomSearchViewHolder extends LinearLayout implements ISearchViewH
 
     @Override
     public void onFocusChanged(EditText editText, boolean flag) {}
+
+    @Override
+    public void onTabChanged(int i) {
+    }
 }

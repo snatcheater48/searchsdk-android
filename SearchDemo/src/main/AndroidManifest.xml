@@ -36,7 +36,7 @@
         <activity
             android:name="com.yahoo.mobile.client.share.search.ui.activity.LocalPreviewActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/LocalPreview"
+            android:theme="@style/SearchToLink.Preview.Overlay"
             android:windowSoftInputMode="adjustPan" />
 
         <activity

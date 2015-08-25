@@ -3,3 +3,15 @@
 -keep class * implements com.yahoo.mobile.client.share.search.interfaces.IFactory
 -dontwarn com.yahoo.mobile.client.share.search.**
 -dontwarn com.yahoo.data.**
+-keepnames class * implements android.os.Parcelable {
+public static final ** CREATOR;
+}
+
+-keepclassmembers public class * extends android.support.v4.app.Fragment {
+   public <init>(...);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}

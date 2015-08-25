@@ -14,7 +14,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -22,7 +22,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.yahoo.android.search.showcase.fragment.NavigationDrawerFragment;
 
 
-public class SearchDemoActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class SearchDemoActivity extends AppCompatActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.

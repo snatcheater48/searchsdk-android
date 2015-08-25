@@ -18,6 +18,7 @@ import com.yahoo.mobile.client.share.search.data.SearchQuery;
 import com.yahoo.mobile.client.share.search.data.SearchResponseData;
 import com.yahoo.mobile.client.share.search.data.contentmanager.ContentManager;
 import com.yahoo.mobile.client.share.search.interfaces.IQueryManager;
+import com.yahoo.mobile.client.share.search.ui.activity.SearchLayoutParams;
 import com.yahoo.mobile.client.share.search.ui.contentfragment.SearchResultFragment;
 
 import java.util.List;
@@ -74,23 +75,8 @@ public class CustomTumblrFragment extends SearchResultFragment implements Conten
 
     }
 
-    /**
-     * Apply Top padding to custom views here.
-     * @param topPadding
-     */
-
     @Override
-    public void setTopPadding(int topPadding) {
-
-    }
-
-    /**
-     * Apply Bottom padding to custom views here.
-     * @param bottomPadding
-     */
-
-    @Override
-    public void setBottomPadding(int bottomPadding) {
+    public void setLayoutParams(SearchLayoutParams searchLayoutParams) {
 
     }
 

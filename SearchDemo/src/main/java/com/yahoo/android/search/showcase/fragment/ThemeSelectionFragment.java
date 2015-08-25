@@ -82,6 +82,7 @@ public class ThemeSelectionFragment extends Fragment {
         SearchActivity.IntentBuilder builder = new SearchActivity.IntentBuilder();
         builder.setCustomHeader( R.layout.search_view_custom_header_dark);
         builder.setCustomFooter( R.layout.search_view_custom_footer_dark);
+        builder.setCustomSearchAssist( R.layout.search_view_custom_assist_dark );
         builder.addWebVertical();
         builder.addImageVertical();
         builder.addVideoVertical();
