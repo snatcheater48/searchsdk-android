@@ -34,6 +34,7 @@
     <color name="demo_search_tab_blue_theme_selected_bg">#5E76A2</color>
     <color name="demo_search_tab_blue_theme_unselected_bg">#6F8BBF</color>
     <color name="demo_searchbar_drop_shadow">#AA888888</color>
+    <color name="demo_search_assist_blue_theme_bg">#FFBDD6E9</color>
 
     <!-- tumblr -->
     <color name="demo_tumblr_bg">#2E3F53</color>

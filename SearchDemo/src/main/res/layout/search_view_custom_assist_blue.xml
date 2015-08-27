@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/yssdk_search_suggest_tip_size"
     android:orientation="horizontal"
-    android:background="@color/demo_searchbar_dark_theme_bg">
+    android:background="@color/demo_search_assist_blue_theme_bg">
 
     <ImageView
         android:id="@+id/icon"
@@ -26,7 +26,7 @@
         android:singleLine="true"
         android:text="Search Tip"
         android:textSize="18sp"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/black" />
 
     <ImageView
         android:id="@+id/add"

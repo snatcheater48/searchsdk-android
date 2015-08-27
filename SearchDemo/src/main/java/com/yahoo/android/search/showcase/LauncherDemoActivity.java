@@ -28,6 +28,7 @@ public class LauncherDemoActivity extends Activity implements View.OnClickListen
         builder.setCustomTheme(R.style.CustomBlurTheme);
         builder.setCustomHeader(R.layout.search_view_custom_header_blue);
         builder.setCustomFooter(R.layout.search_view_custom_footer_blue);
+        builder.setCustomSearchAssist(R.layout.search_view_custom_assist_blue);
         builder.showTransparentBackground(true);
         Intent i = builder.buildIntent(LauncherDemoActivity.this);
         startActivity(i);
