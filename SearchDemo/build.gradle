@@ -44,7 +44,7 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.0'
-    compile(name: 'yahoosearchsdk-0.7.0', ext: 'aar')
+    compile(name: 'yahoosearchsdk-0.7.1', ext: 'aar')
 }
 
 task wrapper(type: Wrapper) {
