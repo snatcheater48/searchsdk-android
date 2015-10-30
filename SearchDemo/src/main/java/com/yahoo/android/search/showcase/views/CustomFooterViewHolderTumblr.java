@@ -77,7 +77,7 @@ public class CustomFooterViewHolderTumblr extends CustomBaseFooterViewHolder {
         if (mTabList != null) {
             for (int i = 0; i < mTabList.size(); i++) {
                 if (i == position) {
-                    updateTabTextColor(i, getResources().getColor(R.color.white), true);
+                    updateTabTextColor(i, getResources().getColor(R.color.yssdk_white), true);
                 } else {
                     updateTabTextColor(i, getResources().getColor(R.color.demo_tumblr_unselected_text), false);
                 }
