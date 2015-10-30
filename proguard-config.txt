@@ -7,6 +7,10 @@
 public static final ** CREATOR;
 }
 
+## Support library v4 23.0.1
+-dontwarn android.support.v4.**
+
+
 -keepclassmembers public class * extends android.support.v4.app.Fragment {
    public <init>(...);
 }
