@@ -59,7 +59,7 @@ public class CustomSearchAssistItem extends LinearLayout implements ISearchAssis
             case ISearchAssistData.SEARCH_DEFAULT:
                 buildSearchSuggestItem();
                 break;
-            case ISearchAssistData.LOCAL_HISTORY:
+            case ISearchAssistData.LOCAL_WEB:
             case ISearchAssistData.CLEAR_LOCAL_HISTORY:
             case ISearchAssistData.SHOW_ALL_HISTORY:
             case ISearchAssistData.SEARCH_TRENDING:
@@ -96,7 +96,7 @@ public class CustomSearchAssistItem extends LinearLayout implements ISearchAssis
         ImageView iconView = (ImageView) findViewById(R.id.icon);
         Resources res = getContext().getResources();
         switch (mData.getType()) {
-            case ISearchAssistData.LOCAL_HISTORY:
+            case ISearchAssistData.LOCAL_WEB:
                 iconView.setImageDrawable(res.getDrawable(android.R.drawable.ic_menu_recent_history));
                 iconView.setVisibility(View.VISIBLE);
                 break;

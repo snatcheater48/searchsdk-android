@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yahoo.android.search.showcase.LauncherDemoActivity">
+
+    <LinearLayout
+        android:id="@+id/search_bar_view_group"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_custom_bar_height"
+        android:background="@drawable/custom_blue_border"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/search_bar_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="@dimen/search_custom_header_horizontal_margin"
+            android:paddingBottom="@dimen/search_custom_header_horizontal_margin"
+            android:paddingRight="@dimen/search_custom_header_horizontal_margin"
+            android:paddingLeft="@dimen/search_custom_header_magnifient_glass_horizontal_padding"
+            android:src="@drawable/abc_ic_search_api_mtrl_alpha"/>
+
+        <EditText
+            android:id="@+id/search_bar_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/yssdk_white"
+            android:textColorHint="@color/yssdk_white"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Search"
+            android:singleLine="true"
+            android:focusable="false"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

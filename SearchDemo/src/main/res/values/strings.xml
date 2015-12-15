@@ -44,9 +44,12 @@
     <string name="demo_images">Images</string>
     <string name="demo_video">Video</string>
     <string name="demo_custom_tab_text">Design custom tabs to seamlessly integrate app-specific search results within an elegant tab bar.</string>
+    <string name="demo_search_buzz_text">Standalone android custom view which can be integrated by Apps for Trending Terms.</string>
     <string name="demo_tumblr_web">Tumblr + Web</string>
     <string name="demo_tumblr_web_local">Tumblr + Web + Local</string>
     <string name="demo_web_image_video_tumblr">Web + Image + Video + Tumblr</string>
+    <string name="demo_search_buzz_default">Deafult Trending view</string>
+    <string name="demo_search_buzz_customized">Customized Trending view</string>
     <string name="demo_preview">Preview</string>
 
     <!--Search to link Screen-->
@@ -66,6 +69,7 @@
         <item android:id="@+id/search_to_link">Search to Link</item>
         <item android:id="@+id/themes">Themes</item>
         <item android:id="@+id/custom_tabs">Custom Tabs</item>
+        <item android:id="@+id/custom_tabs">Search Buzz</item>
         <item android:id="@+id/search_settings">Settings</item>
         <!--<item android:id="@+id/search_themes">Themes</item>-->
         <!--<item android:id="@+id/search_help">Help</item>-->
@@ -74,5 +78,11 @@
     <string name="title_activity_launcher_demo">LauncherDemoActivity</string>
 
     <string name="hello_world">Hello world!</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Trending View-->
+    <string name="demo_trending_intialize_text">Initializing Trending View. Please wait..</string>
 
 </resources>

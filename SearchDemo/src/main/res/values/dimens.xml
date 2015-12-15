@@ -42,4 +42,7 @@
     <dimen name="separator_margin">10dp</dimen>
 
     <!-- Content Suggest Dimensions-->
+
+    <!-- Search Buzz-->
+    <dimen name="search_buzz_image_height">150dp</dimen>
 </resources>
