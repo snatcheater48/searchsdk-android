@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yahoo.android.search.showcase.views.TrendingHeaderContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/yssdk_trending_header_text"
+        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:drawablePadding="2dp"
+        android:textColor="#FC2F70"
+        android:textStyle="bold"
+        android:textSize="@dimen/yssdk_trendingview_header_text_size"
+        android:text="@string/yssdk_trending_view_header_text" />
+
+</com.yahoo.android.search.showcase.views.TrendingHeaderContainer>
