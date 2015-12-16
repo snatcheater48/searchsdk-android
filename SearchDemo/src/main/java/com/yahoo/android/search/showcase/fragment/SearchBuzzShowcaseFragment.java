@@ -16,6 +16,7 @@ import com.yahoo.android.search.showcase.R;
 import com.yahoo.mobile.client.share.search.SearchError;
 import com.yahoo.mobile.client.share.search.interfaces.ITrendingViewListener;
 import com.yahoo.mobile.client.share.search.settings.TrendingViewSettings;
+import com.yahoo.mobile.client.share.search.ui.activity.TrendingSearchEnum;
 import com.yahoo.mobile.client.share.search.ui.view.TrendingView;
 
 public class SearchBuzzShowcaseFragment extends Fragment implements ITrendingViewListener{
@@ -50,9 +51,17 @@ public class SearchBuzzShowcaseFragment extends Fragment implements ITrendingVie
     private void initCustomizedTrendingView() {
         mTrendingView.setBackgroundResource(R.drawable.trending_gradient_background);
         TrendingViewSettings.Builder builder = new TrendingViewSettings.Builder();
+
         builder.setCustomHeader(R.layout.trending_view_header);
         builder.setCustomTerm(R.layout.trending_view_item);
 
+        /* Builder example usage - Uncomment to check it out
+        builder.setHeaderIconColor(R.color.yssdk_white);
+        builder.setHeaderIconDimension(R.dimen.search_buzz_icon_width, R.dimen.search_buzz_icon_height);
+        builder.setCommercialIconDimension(R.dimen.search_buzz_icon_width, R.dimen.search_buzz_icon_width);
+        builder.setCategory(TrendingSearchEnum.NEWS);
+        builder.setNumTerms(6);
+        builder.setNumColumns(1); */
         mTrendingView.initialize(builder.build(),this);
     }
     @Override
